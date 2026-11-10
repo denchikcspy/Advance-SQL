@@ -26,12 +26,12 @@ namespace WindowsFormsApp8
                 List<User> list = _userRepository.GetAll();
 
                 listBox1.Items.Clear();
-                richTextBox1.Clear();
+                
 
                 foreach (var user in list)
                 {
                     listBox1.Items.Add($"{user.Id}. {user.Name} | {user.Email} | ДН: {user.GetFormattedDate(user.BirthDay)}");
-                    richTextBox1.AppendText($"{user.Id}. {user.Name} | {user.Email} | ДН: {user.GetFormattedDate(user.BirthDay)}");
+                    
                 }
             }
             catch (Exception ex)

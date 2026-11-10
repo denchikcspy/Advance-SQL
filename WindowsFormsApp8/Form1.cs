@@ -31,9 +31,9 @@ namespace WindowsFormsApp8
             }
 
             
-            if (!email.Contains("@") || !email.Contains("."))
+            if (!email.Contains("@") || !email.Contains(".") || email.Length < 10 || email.Length > 50)
             {
-                MessageBox.Show("Введіть коректний email (має містити '@' та '.')!");
+                MessageBox.Show("Введіть коректний email (має містити '@' та '.', довжина від 10 до 50 символів)!");
                 return;
             }
 
